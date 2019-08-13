@@ -1,17 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, browserHistory } from 'react-router-dom';
-import { RandomPhoneNumberGenerator  } from '../components/index';
-
-const NotFound = () => (
-  <div>
-    Page Not Found
-  </div>
-);
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import RandomPhoneNumberGenerator from '../pages/index';
+import NotFound from '../components/NotFound';
 
 const Routes = () => (
-    <BrowserRouter history={browserHistory}>
+    <BrowserRouter>
       <Switch>
-        <Route path='/home' exact component={RandomPhoneNumberGenerator } />
+        <Route path='/' exact component={RandomPhoneNumberGenerator } />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
