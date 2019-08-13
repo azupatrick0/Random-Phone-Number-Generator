@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/azupatrick0/Random-Phone-Number-Generator.svg?branch=develop)](https://travis-ci.org/azupatrick0/Random-Phone-Number-Generator)
+[![Build Status](https://travis-ci.com/azupatrick0/Random-Phone-Number-Generator.svg?branch=develop)](https://travis-ci.com/azupatrick0/Random-Phone-Number-Generator)
 [![Coverage Status](https://coveralls.io/repos/github/azupatrick0/Random-Phone-Number-Generator/badge.svg?branch=develop)](https://coveralls.io/github/azupatrick0/Random-Phone-Number-Generator?branch=develop)
 # Random-Phone-Number-Generator
 ## Description

@@ -7,7 +7,7 @@ import generateRandomPhoneNumbers from './helpers/generateRandomPhoneNumbers';
 
 const app = express();
 
-const port = process.env.PORT || 4004;
+const port = process.env.PORT || 4008;
 
 app.use(express.static('./build'));
 app.use(bodyParser.json());
@@ -20,8 +20,8 @@ app.get('/api/v1/random-phone-numbers', (req, res) => {
     status: 200,
     data: {
       message: 'Phone numbers returned successfully',
+      totalPhoneNumberGenerated: returnedPhoneNumbers.totalPhoneNumbersGenerated,
       phoneNumbers: returnedPhoneNumbers.generatedPhoneNumbers,
-      totalPhoneNumberGenerated: returnedPhoneNumbers.totalPhoneNumbersGenerated
     }
   });
 });
