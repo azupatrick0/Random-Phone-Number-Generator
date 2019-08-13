@@ -7,20 +7,21 @@ import generateRandomPhoneNumbers from './helpers/generateRandomPhoneNumbers';
 
 const app = express();
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4004;
 
 app.use(express.static('./build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/random-phone-numbers', (req, res) => {
-  const generatedPhoneNumbers = generateRandomPhoneNumbers();
+app.get('/api/v1/random-phone-numbers', (req, res) => {
+  const returnedPhoneNumbers = generateRandomPhoneNumbers();
   res.status(200).json({
     status: 200,
     data: {
       message: 'Phone numbers returned successfully',
-      phoneNumbers: generatedPhoneNumbers
+      phoneNumbers: returnedPhoneNumbers.generatedPhoneNumbers,
+      totalPhoneNumberGenerated: returnedPhoneNumbers.totalPhoneNumbersGenerated
     }
   });
 });

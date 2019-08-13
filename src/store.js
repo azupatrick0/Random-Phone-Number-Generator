@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware, combineReducers } from 'reduxe_modules/redux';
+import { composeWithDevTools } from 'redux-devtools-extensiontools-extension';
+import thunk from 'redux-thunkles/redux-thunk';
 import {
     SigninReducer,
 } from './reducers/index';
