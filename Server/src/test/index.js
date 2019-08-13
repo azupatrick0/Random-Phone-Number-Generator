@@ -26,11 +26,13 @@ describe('Random-Phone-Number-Generator Test Suite', () => {
   // ==== Unit test - generateRandomPhoneNumbers() ==== //
 
 	describe('Unit test - generateRandomPhoneNumbers()', () => {
-		it('generateRandomPhoneNumbers() should be an object that has properties {generatedPhoneNumbers,totalPhoneNumbersGenerated}', (done) => {
+		it('generateRandomPhoneNumbers() should be an object that has properties {generatedPhoneNumbers,totalPhoneNumbersGenerated, maximumNumber, minimumNumber}', (done) => {
       const randomPhoneNumbers = generateRandomPhoneNumbers();
       expect(randomPhoneNumbers).to.be.an('object');
       expect(randomPhoneNumbers).to.have.own.property('generatedPhoneNumbers');
       expect(randomPhoneNumbers).to.have.own.property('totalPhoneNumbersGenerated');
+      expect(randomPhoneNumbers).to.have.own.property('maximumNumber');
+      expect(randomPhoneNumbers).to.have.own.property('minimumNumber');
       expect(randomPhoneNumbers.generatedPhoneNumbers[0][0]).to.eql('0');
 			done();
 		});
