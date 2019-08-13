@@ -21,6 +21,8 @@ app.get('/api/v1/random-phone-numbers', (req, res) => {
     data: {
       message: 'Phone numbers returned successfully',
       totalPhoneNumberGenerated: returnedPhoneNumbers.totalPhoneNumbersGenerated,
+      maximumNumber: `0${returnedPhoneNumbers.maximumNumber}`,
+      minimumNumber: `0${returnedPhoneNumbers.minimumNumber}`,
       phoneNumbers: returnedPhoneNumbers.generatedPhoneNumbers,
     }
   });
