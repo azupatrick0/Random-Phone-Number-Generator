@@ -1,5 +1,5 @@
 import SigninReducer from './SigninReducer';
 
-export { 
+export default { 
   SigninReducer,
 }
