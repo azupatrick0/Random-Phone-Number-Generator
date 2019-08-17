@@ -1,5 +1,3 @@
-import SigninAUser from './SigninActions';
+import generateRandomPhoneNumbers from './generateRandomPhoneNumbers';
 
-export default {
-    SigninAUser
-};
+export default generateRandomPhoneNumbers;

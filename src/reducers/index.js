@@ -1,5 +1,4 @@
-import SigninReducer from './SigninReducer';
+import generateRandomPhoneNumbersReducer from './generateRandomPhoneNumbersReducer';
 
-export default { 
-  SigninReducer,
-}
+export default generateRandomPhoneNumbersReducer;
+
