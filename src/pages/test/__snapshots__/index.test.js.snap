@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RandomPhoneNumberGenerator Client Test suite renders RandomPhoneNumberGenerator component without crashing 1`] = `ShallowWrapper {}`;
+
+exports[`RandomPhoneNumberGenerator Client Test suite renders connected RandomPhoneNumberGenerator component without crashing 1`] = `ReactWrapper {}`;

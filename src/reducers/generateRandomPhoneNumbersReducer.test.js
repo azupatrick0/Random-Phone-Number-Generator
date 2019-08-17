@@ -1,4 +1,4 @@
-import generateRandomPhoneNumbersReducer from './index';
+import generateRandomPhoneNumbersReducer from './generateRandomPhoneNumbersReducer';
 
 describe(' Random Phone Numbers Redcuer Test Suite', () => {
   it('should returns status error when an error occurs during generating phone numbers', () => {
@@ -49,6 +49,22 @@ describe(' Random Phone Numbers Redcuer Test Suite', () => {
         ],
       },
       status: 'SUCCESS',
+      error: ''
+    });
+  });
+
+  it('should returns status loading while wating for async event to complete', () => {
+    const initialState = {
+      generatedPhoneNumbers: {},
+      status: '',
+      error: ''
+    };
+    const state = generateRandomPhoneNumbersReducer(initialState, {
+      type: 'START_LOADING'
+    });
+    expect(state).toEqual({
+      generatedPhoneNumbers: {},
+      status: 'START_LOADING',
       error: ''
     });
   });

@@ -9,7 +9,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import '../App.css';
 import Card from '../components/Card';
 import Table from '../components/Table';
-import generateRandomPhoneNumbers from '../actions/index';
+import generatesRandomPhoneNumbers from '../actions/generateRandomPhoneNumbers';
 
 export class RandomPhoneNumberGenerator extends Component {
 	state = {
@@ -60,8 +60,8 @@ export class RandomPhoneNumberGenerator extends Component {
 			sorting: false,
 			paginationStarted: false
 		});
-		const { generateRandomPhoneNumbers } = this.props;
-		await generateRandomPhoneNumbers();
+		const { generatesRandomPhoneNumbers } = this.props;
+		await generatesRandomPhoneNumbers();
 	};
 
 	sortPhoneNumbersAscending = () => {
@@ -183,7 +183,7 @@ export class RandomPhoneNumberGenerator extends Component {
 										generatedRandomPhoneNumbers.generatedPhoneNumbers.hasOwnProperty(
 											'phoneNumbers'
 										) &&
-										generatedRandomPhoneNumbers.generatedPhoneNumbers.totalPhoneNumberGenerated) ||
+										generatedRandomPhoneNumbers.generatedPhoneNumbers.totalPhoneNumbersGenerated) ||
 									'0'
 								}
 							/>
@@ -194,7 +194,7 @@ export class RandomPhoneNumberGenerator extends Component {
 										generatedRandomPhoneNumbers.generatedPhoneNumbers.hasOwnProperty(
 											'phoneNumbers'
 										) &&
-										generatedRandomPhoneNumbers.generatedPhoneNumbers.maximumNumber) ||
+										`0${generatedRandomPhoneNumbers.generatedPhoneNumbers.maximumNumber}`) ||
 									'0'
 								}
 							/>
@@ -205,7 +205,7 @@ export class RandomPhoneNumberGenerator extends Component {
 										generatedRandomPhoneNumbers.generatedPhoneNumbers.hasOwnProperty(
 											'phoneNumbers'
 										) &&
-										generatedRandomPhoneNumbers.generatedPhoneNumbers.minimumNumber) ||
+										`0${generatedRandomPhoneNumbers.generatedPhoneNumbers.minimumNumber}`) ||
 									'0'
 								}
 							/>
@@ -224,8 +224,7 @@ export class RandomPhoneNumberGenerator extends Component {
 										.map((phoneNumber, index) => (
 											<Table serialNumber={index + 1} tableValue={phoneNumber} />
 										))}
-								{phoneNumbers &&
-								phoneNumbers.length > 0 && (
+								{(
 									<ReactPaginate
 										previousLabel="&#8592;"
 										nextLabel="&#8594;"
@@ -253,4 +252,4 @@ const mapStateToProps = (state) => ({
 	generatedRandomPhoneNumbers: state.generatedPhoneNumbers
 });
 
-export default connect(mapStateToProps, { generateRandomPhoneNumbers })(RandomPhoneNumberGenerator);
+export default connect(mapStateToProps, { generatesRandomPhoneNumbers })(RandomPhoneNumberGenerator);

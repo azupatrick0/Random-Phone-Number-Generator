@@ -1,6 +1,6 @@
 import randomPhoneNumbers from '../models/randomPhoneNumbers';
-import maxNumber from '../helpers/maxNumber';
-import minNumber from '../helpers/minNumber';
+import maxNumber from './maxNumber';
+import minNumber from './minNumber';
 
 const generateRandomPhoneNumbers = () => {
   let generatedPhoneNumbers = [];
@@ -12,7 +12,8 @@ const generateRandomPhoneNumbers = () => {
 		}
   }
   return {
-    generatedPhoneNumbers: generatedPhoneNumbers.sort((a,b) => a-b),
+    message: 'Phone numbers returned successfully',
+    phoneNumbers: generatedPhoneNumbers.sort((a,b) => a-b),
     totalPhoneNumbersGenerated: generatedPhoneNumbers.length,
     maximumNumber: maxNumber(generatedPhoneNumbers),
     minimumNumber: minNumber(generatedPhoneNumbers)
