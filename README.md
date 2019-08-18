@@ -8,13 +8,12 @@ Random-Phone-Number-Generator is an app that generates random phone numbers
   * A user can view the total number of phone numbers generated and the list of numbers anytime
   * A user can sort all generated phone numbers in ascending/descending order
   * A user can find the max and min generated phone number
-  * Running the generator twice should produce new numbers each time.
+  * Running the generator twice produces new numbers each time.
 ## Technologies
   * HTML
   * CSS
   * Javascript
   * React
-  * Express
   * Jest
   * Eslint
   * Babel
