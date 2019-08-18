@@ -19,8 +19,6 @@ Random-Phone-Number-Generator is an app that generates random phone numbers
   * Babel
 ## App Link
 [Link](https://random-phone-number-gen.herokuapp.com)
-## Documentation
-[Link](https://documenter.getpostman.com/view/4628385/SVfGyXY5)
 ## Installation
  * Ensure you have node 10.x.x installed.
  
