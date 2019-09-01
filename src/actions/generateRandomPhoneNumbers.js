@@ -1,4 +1,3 @@
-import Axios from 'axios';
 import { ACTIONS } from './actionTypes';
 import generateRandomPhoneNumbers from '../helpers/generateRandomPhoneNumbers';
 
