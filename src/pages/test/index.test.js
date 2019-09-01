@@ -12,6 +12,8 @@ configure({ adapter: new Adapter() });
 const props = {
   generatesRandomPhoneNumbers: jest.fn(),
   getDerivedStateFromProps: jest.fn(),
+  generateCSV: jest.fn(),
+  displaySideNav: jest.fn()
 };
 
 const state = {
@@ -141,5 +143,17 @@ describe('RandomPhoneNumberGenerator Client Test suite', () => {
     });
     expect(wrapper.state().visible).toEqual(false);
     expect(wrapper.state().status).toEqual('ERROR');
+  });
+
+  it('should generate csv file', () => {
+    const wrapper = shallow(<RandomPhoneNumberGenerator {...props}/>);
+    wrapper.instance().generateCSV();
+  });
+
+  it('should display side nav bar', () => {
+    const wrapper = shallow(<RandomPhoneNumberGenerator {...props}/>);
+    wrapper.instance().displaySideNav();
+    expect(wrapper.state().displaySideNav).toBe(true);
+    expect(wrapper.state().status).toEqual('displaying side nav');
   });
 });
