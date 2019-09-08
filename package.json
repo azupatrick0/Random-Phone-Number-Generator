@@ -8,7 +8,6 @@
     "build": "react-scripts build",
     "test": "nyc react-scripts test --coverage --updateSnapshot",
     "eject": "react-scripts eject",
-    "clean": "rimraf ./Server/dist",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "eslintConfig": {
