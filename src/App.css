@@ -95,7 +95,7 @@ body {
 
 @media (max-width: 1024px) {
   .side-nav__footer {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .side-nav__button {
