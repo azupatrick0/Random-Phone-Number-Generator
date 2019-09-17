@@ -145,25 +145,25 @@ export class RandomPhoneNumberGenerator extends Component {
 				<div style={{ display: 'flex', fontFamily: 'Verdana', color: 'rgba(90, 14, 90, 0.8)' }}>
 					<ToastContainer />
 					{displaySideNav && (
-            <SideNav
-            className={'side-nav-mobile'}
-            displaySideNav={this.displaySideNav}
-            sortPhoneNumbersAscending={this.sortPhoneNumbersAscending}
-            sortPhoneNumbersDescending={this.sortPhoneNumbersDescending}
-            generateCSV={this.generateCSV}
-            />
-          )}
+						<SideNav
+							className={'side-nav-mobile'}
+							displaySideNav={this.displaySideNav}
+							sortPhoneNumbersAscending={this.sortPhoneNumbersAscending}
+							sortPhoneNumbersDescending={this.sortPhoneNumbersDescending}
+							generateCSV={this.generateCSV}
+						/>
+					)}
 
-          <SideNav
-            className={'side-nav'}
-            displaySideNav={this.displaySideNav}
-            sortPhoneNumbersAscending={this.sortPhoneNumbersAscending}
-            sortPhoneNumbersDescending={this.sortPhoneNumbersDescending}
-            generateCSV={this.generateCSV}
-          />
+					<SideNav
+						className={'side-nav'}
+						displaySideNav={this.displaySideNav}
+						sortPhoneNumbersAscending={this.sortPhoneNumbersAscending}
+						sortPhoneNumbersDescending={this.sortPhoneNumbersDescending}
+						generateCSV={this.generateCSV}
+					/>
 
 					<div style={{ width: '80vw' }}>
-            {/* RPNG */}
+						{/* RPNG */}
 						<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
 							<div className="hamburger" onClick={this.displaySideNav}>
 								&#9776;
@@ -182,7 +182,7 @@ export class RandomPhoneNumberGenerator extends Component {
 						</div>
 						<br />
 
-            {/* Generate phone numbers button */}
+						{/* Generate phone numbers button */}
 						<div className="generate-phone-number-button">
 							<span className="shift-generate-phone-number-button" />
 							<Button
@@ -196,7 +196,7 @@ export class RandomPhoneNumberGenerator extends Component {
 						</div>
 						<br />
 
-            {/* Cards */}
+						{/* Cards */}
 						<div className="cards-space">
 							<Card
 								title="Total of Phone Numbers"
@@ -234,7 +234,7 @@ export class RandomPhoneNumberGenerator extends Component {
 						</div>
 						<br />
 
-            {/* List of Phone Numbers */}
+						{/* List of Phone Numbers */}
 						<div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20 }}>
 							<span className="list-of-numbers-text">List of Phone Numbers</span>
 						</div>
