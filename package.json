@@ -4,9 +4,9 @@
   "private": true,
   "description": "Random-Phone-Number-Generator is an app that generates phone numbers",
   "scripts": {
-    "start": "react-scripts build && node .",
+    "start": "node .",
     "start:dev": "react-scripts start",
-    "build": "react-scripts build && node .",
+    "build": "react-scripts build",
     "test": "nyc react-scripts test --coverage --updateSnapshot",
     "eject": "react-scripts eject",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
