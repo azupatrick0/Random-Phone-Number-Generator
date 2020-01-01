@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import RandomPhoneNumberGenerator from '../pages/index';
 import NotFound from '../components/NotFound';
