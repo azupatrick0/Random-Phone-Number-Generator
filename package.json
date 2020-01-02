@@ -4,8 +4,9 @@
   "private": true,
   "description": "Random-Phone-Number-Generator is an app that generates phone numbers",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts build && node .",
+    "start:dev": "react-scripts start",
+    "build": "react-scripts build && node .",
     "test": "nyc react-scripts test --coverage --updateSnapshot",
     "eject": "react-scripts eject",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
@@ -43,7 +44,6 @@
   "bugs": {
     "url": "https://github.com/azupatrick0/Random-Phone-Number-Generator/issues"
   },
-  "homepage": "https://github.com/azupatrick0/Random-Phone-Number-Generator#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
@@ -75,7 +75,7 @@
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "rimraf": "^2.6.2",
-    "serve": "^11.1.0",
+    "serve": "^11.3.0",
     "toastr": "2.1.2"
   },
   "devDependencies": {
