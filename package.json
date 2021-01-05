@@ -45,7 +45,7 @@
     "url": "https://github.com/azupatrick0/Random-Phone-Number-Generator/issues"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-polyfill": "6.8.0",
